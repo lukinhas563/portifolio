@@ -1,0 +1,36 @@
+:root {
+    --cor-primaria: #F2F2F2;
+    --cor-secundaria: #46434E;
+}
+
+.navComponent {
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    height: 7vh;
+    background-color: var(--cor-primaria);
+    position: fixed;
+    z-index: 1;
+}
+
+.navComponent h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5rem;
+}
+
+.navComponent-list {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin-right: 5rem;
+}
+
+.navComponent-list li a {
+    text-decoration: none;
+    color: var(--cor-secundaria);
+    cursor: pointer;
+}

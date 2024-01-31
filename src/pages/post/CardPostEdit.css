@@ -1,0 +1,12 @@
+.cardPostEdit {
+    height: 10rem;
+    width: 10rem;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.cardPostEdit img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}

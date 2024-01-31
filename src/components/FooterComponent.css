@@ -1,0 +1,33 @@
+:root {
+    --cor-primaria: #F2F2F2;
+    --cor-secundaria: #303030;
+    --cor-terciaria: #FFB900;
+}
+
+
+.footercomponent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+    background-color: var(--cor-secundaria);
+    color: #F2F2F2;
+    gap: 1rem;
+}
+
+.footercomponent ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.footercomponent h6 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
