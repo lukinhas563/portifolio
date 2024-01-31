@@ -206,6 +206,7 @@ export default function Post() {
         setTec('')
         setTex('')
         setTitle('')
+        setLink('')
     }
 
     async function handleSubmit(e) {

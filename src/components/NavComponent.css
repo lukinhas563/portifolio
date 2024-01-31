@@ -39,3 +39,7 @@
     color: var(--cor-secundaria);
     cursor: pointer;
 }
+
+.signOut {
+    cursor: pointer;
+}

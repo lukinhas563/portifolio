@@ -6,7 +6,6 @@ import AboutComponent from './components/AboutComponent'
 import ProjectsComponent from './components/ProjectsComponent'
 import ContactComponent from './components/ContactComponent'
 import FooterComponent from './components/FooterComponent'
-
 import { useEffect, useState } from 'react'
 import { addOnSnapshot } from './services/observers/PostObserver'
 
