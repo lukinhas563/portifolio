@@ -8,7 +8,7 @@ export default function HeaderComponent() {
     return (
         <header className='headerComponent' id='home'>
             <div className='headerComponent-apresentation'>
-                <h2>Lucas </h2>
+                <h1>Lucas </h1>
                 <h2>Montenegro</h2>
                 <h3>Desenvolvedor front-end</h3>
                 <ul>

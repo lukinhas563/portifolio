@@ -1,6 +1,7 @@
 :root {
     --cor-primaria: #F2F2F2;
     --cor-secundaria: #303030;
+    --cor-terciaria: #FFB900;
 }
 
 .headerComponent {
@@ -21,7 +22,8 @@
     background-color: var(--cor-primaria);
 }
 
-.headerComponent-apresentation h2 {
+.headerComponent-apresentation h2,
+h1 {
     margin-left: 5rem;
     font-size: 4rem;
     font-weight: bolder;
@@ -44,6 +46,11 @@
 
 .headerComponent-apresentation ul li a {
     color: var(--cor-secundaria);
+    transition: color 200ms ease-in-out;
+}
+
+.headerComponent-apresentation ul li a:hover {
+    color: var(--cor-terciaria);
 }
 
 .headerComponent-about {

@@ -13,11 +13,16 @@
     z-index: 1;
 }
 
-.navComponent h1 {
+.navTitle {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-left: 5rem;
+    font-weight: bolder;
+    font-size: 20px;
+    cursor: pointer;
+    color: var(--cor-secundaria);
+    text-decoration: none;
 }
 
 .navComponent-list {

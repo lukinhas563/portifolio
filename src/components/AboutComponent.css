@@ -29,6 +29,10 @@
     color: var(--cor-terciaria);
 }
 
+.aboutMe-article p {
+    line-height: 1.5rem;
+}
+
 .aboutMe-article p b {
     color: var(--cor-terciaria);
 }

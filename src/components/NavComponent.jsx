@@ -24,14 +24,13 @@ export default function NavComponent() {
 
     return (
         <nav className='navComponent'>
-            <h1>Lucas M.</h1>
+            <a href={idHome === null ? '/' : '#home'} className='navTitle'>Lucas M.</a>
             <ul className='navComponent-list'>
                 <li><a href={idHome === null ? '/' : '#home'}>Inicio</a></li>
                 <li><a href={idAbout === null ? '/' : '#about'}>Sobre</a></li>
                 <li><a href={idProjects === null ? '/' : '#projects'}>Projetos</a></li>
                 <li><a href={idContact === null ? '/' : '#contact'}>Contato</a></li>
             </ul>
-
         </nav>
     )
 }
