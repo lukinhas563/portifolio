@@ -36,16 +36,6 @@ export default function HeaderComponent() {
                     <li><a href='https://github.com/lukinhas563' target='_blank' rel='noreferrer'><AiFillGithub size={30} /></a></li>
                 </ul>
             </div>
-            <div className='headerComponent-about'>
-                <h4>
-                    Um entusiasta em desenvolvimento front-end apaixonado em criar soluções digitais inovadoras.
-                </h4>
-                <p>
-                    Minha jornada profissional começou no campo de Comércio Exterior, onde obtive uma sólida formação.
-                    No entanto, após dois anos trabalhando em contabilidade, percebi que minha verdadeira paixão reside
-                    na criação de soluções digitais inovadoras.
-                </p>
-            </div>
             <div className='headerComponent-skills'>
                 <h4>Habilidades</h4>
                 <ul>
