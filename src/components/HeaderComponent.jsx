@@ -1,9 +1,29 @@
+import { useState } from 'react';
 import './HeaderComponent.css'
 
 import { AiFillLinkedin } from "react-icons/ai";
 import { AiFillGithub } from "react-icons/ai";
 
 export default function HeaderComponent() {
+
+    const skillsData = [
+        { icon: './icons/reacticon.png', alt: 'Icone React.js', name: 'React' },
+        { icon: './icons/nextjsicon.png', alt: 'Icone Next.js', name: 'Next.js' },
+        { icon: './icons/jsicon.png', alt: 'Icone JavaScript', name: 'JavaScript' },
+        { icon: './icons/tailwindicon.png', alt: 'Icone TailWind', name: 'Tailwind' },
+        { icon: './icons/giticon.png', alt: 'Icone Git', name: 'Git' },
+        { icon: './icons/htmlicon.png', alt: 'Icone HTML5', name: 'HTML5' },
+        { icon: './icons/cssicon.png', alt: 'Icone CSS', name: 'CSS' },
+        { icon: './icons/nodejsicon.png', alt: 'Icone Node.js', name: 'Node.js' },
+        { icon: './icons/figmaicon.svg', alt: 'Icone Figma', name: 'Figma' },
+        { icon: './icons/stiledcomponenticon.png', alt: 'Icone StiledComponent', name: 'StiledComponent' },
+        { icon: './icons/firebaseicon.png', alt: 'Icone Firebase', name: 'Firebase' },
+        { icon: './icons/mysqlicon.png', alt: 'Icone MySQL', name: 'MySQL' },
+        { icon: './icons/dockericon.png', alt: 'Icone Docker', name: 'Docker' },
+        { icon: './icons/mongodbicon.png', alt: 'Icone MongoDB', name: 'MongoDB' },
+    ]
+
+    const [skillName, setSkillName] = useState('')
 
     return (
         <header className='headerComponent' id='home'>
@@ -29,20 +49,19 @@ export default function HeaderComponent() {
             <div className='headerComponent-skills'>
                 <h4>Habilidades</h4>
                 <ul>
-                    <li><img src='./icons/reacticon.png' alt='Icone React.js' /></li>
-                    <li><img src='./icons/nextjsicon.png' alt='Icone Next.js' /></li>
-                    <li><img src='./icons/jsicon.png' alt='Icone JavaScript' /></li>
-                    <li><img src='./icons/tailwindicon.png' alt='Icone TailWind' /></li>
-                    <li><img src='./icons/giticon.png' alt='Icone Git' /></li>
-                    <li><img src='./icons/htmlicon.png' alt='Icone HTML5' /></li>
-                    <li><img src='./icons/cssicon.png' alt='Icone CSS' /></li>
-                    <li><img src='./icons/nodejsicon.png' alt='Icone Node.js' /></li>
-                    <li><img src='./icons/figmaicon.svg' alt='Icone Figma' /></li>
-                    <li><img src='./icons/stiledcomponenticon.png' alt='Icone StiledComponent' /></li>
-                    <li><img src='./icons/firebaseicon.png' alt='Icone Firebase' /></li>
-                    <li><img src='./icons/mysqlicon.png' alt='Icone MySQL' /></li>
-                    <li><img src='./icons/dockericon.png' alt='Icone Docker' /></li>
-                    <li><img src='./icons/mongodbicon.png' alt='Icone MongoDB' /></li>
+                    {skillsData.map((skill, index) => {
+                        return (
+                            <li
+                                key={index}
+                                title={skill.name}
+                                onMouseOver={() => setSkillName(skill.name)}
+                                onMouseOut={() => setSkillName('')}
+                            >
+                                <img src={skill.icon} alt={skill.alt} />
+                                {skillName === skill.name && <p>{skill.name}</p>}
+                            </li>
+                        )
+                    })}
                 </ul>
             </div>
         </header>
