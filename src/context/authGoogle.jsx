@@ -2,6 +2,7 @@ import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth'
 import { auth } from '../services/firebaseConfig.js'
 import { createContext, useEffect, useState } from 'react'
 import { Navigate } from 'react-router-dom'
+import { toast } from 'react-toastify'
 
 export const AuthGoogleContext = createContext({})
 
@@ -34,10 +35,21 @@ export const AuthGoogleProvider = ({ children }) => {
                 const token = credential.accessToken
                 const user = result.user
 
-                setUser(user)
+                if (user.email === import.meta.env.VITE_FIREBASE_EMAILALLOWED) {
 
-                sessionStorage.setItem("@AuthFirebase:token", token)
-                sessionStorage.setItem("@AuthFirebase:user", JSON.stringify(user))
+                    setUser(user)
+
+                    sessionStorage.setItem("@AuthFirebase:token", token)
+                    sessionStorage.setItem("@AuthFirebase:user", JSON.stringify(user))
+
+                    toast.success('Logado com sucesso')
+
+                } else {
+
+                    toast.error('Usuário não permitido')
+                    return
+                }
+
 
             })
             .catch(error => {
@@ -55,6 +67,7 @@ export const AuthGoogleProvider = ({ children }) => {
 
         sessionStorage.clear()
         setUser(null)
+        toast.success('Desconectado')
 
         return <Navigate to={'/login'} />
     }

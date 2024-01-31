@@ -2,8 +2,10 @@ import NavComponent from '../../components/NavComponent'
 import { AiOutlineGoogle } from "react-icons/ai"
 import { useContext } from 'react'
 import { AuthGoogleContext } from '../../context/authGoogle'
-import './Login.css'
 import { Navigate } from 'react-router-dom'
+import { toast } from 'react-toastify'
+
+import './Login.css'
 
 
 export default function Login() {
@@ -12,7 +14,15 @@ export default function Login() {
 
     async function loginGoogle() {
 
-        await handleGoogleSign()
+        try {
+
+            await handleGoogleSign()
+
+        } catch (error) {
+
+            toast.error('Erro inesperado')
+        }
+
 
     }
 
