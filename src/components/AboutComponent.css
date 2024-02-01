@@ -47,16 +47,16 @@
 
 @media (max-width: 1281px) {
 
-    .aboutMe-article div p {
-        font-size: 0.8rem;
+    .aboutMe-article div {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
     }
-
 }
 
 @media (max-width: 1025px) {
 
     .aboutMe {
-        height: 100vh;
+        height: auto;
     }
 
     .aboutMe-article {
@@ -69,7 +69,8 @@
     }
 
     .aboutMe-article h5 {
-        margin-top: 1rem;
+        margin: 2rem 0;
+
     }
 }
 
