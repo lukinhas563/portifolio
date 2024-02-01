@@ -116,3 +116,38 @@
 .loading2 img {
     height: 5rem;
 }
+
+
+@media (max-width: 1281px) {
+
+    .contactsection {
+
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .contactsection-form {
+        margin: 3rem 0;
+    }
+
+}
+
+
+@media (max-width: 679px) {
+
+    .contactsection-form {
+        margin: 3rem 0;
+    }
+
+    .contactsection-form-firstdiv input {
+        width: 100%;
+    }
+
+    .input-text {
+        width: 100%;
+    }
+
+    .input-text-message {
+        width: 100%;
+    }
+}

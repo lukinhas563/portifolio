@@ -50,3 +50,41 @@
     gap: 0.5rem;
 
 }
+
+@media (max-width: 1281px) {}
+
+@media (max-width: 1025px) {}
+
+@media (max-width: 978px) {
+
+    .project-section-main {
+
+        grid-template-columns: 1fr 1fr;
+
+
+    }
+
+}
+
+@media (max-width: 708px) {
+
+    .section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .project-section-main {
+        grid-template-columns: 1fr;
+        margin-bottom: 5rem;
+    }
+
+    .project-section-div {
+        justify-content: space-between;
+    }
+
+    .project-section-div h3 {
+        font-size: 50px;
+        margin-left: 0;
+    }
+}
