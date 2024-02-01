@@ -29,8 +29,9 @@ main {
     gap: 1rem;
     background-color: var(--cor-primaria);
     list-style: none;
-    width: 10rem;
+    width: auto;
     padding-left: 3rem;
+    margin-right: 5rem;
 }
 
 .content-tecList li {
@@ -118,4 +119,28 @@ main {
     gap: 1rem;
     margin-top: 2rem;
     color: #b4b4b4;
+}
+
+@media (max-width: 1180px) {
+
+    .content-header {
+        flex-direction: column;
+
+    }
+
+    .content-tecList {
+        margin: 2rem 0;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        width: auto;
+    }
+}
+
+@media (max-width: 682px) {
+
+    .content-article-tags {
+        display: grid;
+
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
 }

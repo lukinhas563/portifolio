@@ -39,3 +39,11 @@
 .divLogin button:hover {
     background-color: var(--cor-terciaria);
 }
+
+@media (max-width: 820px) {
+
+    .divLogin span {
+        text-align: center;
+        width: 80%;
+    }
+}
