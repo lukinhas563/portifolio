@@ -1,8 +1,9 @@
-import { useState } from 'react';
+import { useState } from 'react'
+import { AiFillLinkedin } from "react-icons/ai"
+import { AiFillGithub } from "react-icons/ai"
+
 import './HeaderComponent.css'
 
-import { AiFillLinkedin } from "react-icons/ai";
-import { AiFillGithub } from "react-icons/ai";
 
 export default function HeaderComponent() {
 
@@ -28,8 +29,8 @@ export default function HeaderComponent() {
     return (
         <header className='headerComponent' id='home'>
             <div className='headerComponent-apresentation'>
-                <h1>Lucas </h1>
-                <h2>Montenegro</h2>
+                <h1>Lucas <br /> Montenegro </h1>
+
                 <h3>Desenvolvedor front-end</h3>
                 <ul>
                     <li><a href='https://www.linkedin.com/in/lucasmontenegro/' target='_blank' rel='noreferrer'><AiFillLinkedin size={30} /></a></li>

@@ -1,6 +1,13 @@
-import { useState } from 'react';
-import { AiOutlineMail } from "react-icons/ai";
+import { useState } from 'react'
+import { AiOutlineMail } from "react-icons/ai"
+import { toast } from 'react-toastify'
+import isEmail from 'validator/lib/isEmail'
+import { isLength } from 'validator'
+import emailjs from '@emailjs/browser'
 import './ContactComponent.css'
+
+
+
 
 export default function ContactComponent() {
 
@@ -10,8 +17,56 @@ export default function ContactComponent() {
     const [company, setCompany] = useState('')
     const [message, setMessage] = useState('')
 
-    function handleSubmit(e) {
+    const [loading, setLoading] = useState(0)
+
+    async function handleSubmit(e) {
         e.preventDefault()
+
+        const valid = validation()
+
+        if (valid) {
+
+            setLoading(1)
+
+            const templateParams = {
+                from_name: name,
+                from_lastname: lastName,
+                from_email: email,
+                from_company: company,
+                message: message
+            }
+
+            try {
+
+                await emailjs.send('service_zp1xhny', 'template_xbqnznw', templateParams, 'mgaqTfNRE2UGAteAD')
+                toast.success('E-mail enviado com sucesso')
+                handleClear()
+                setLoading(0)
+
+            } catch (error) {
+
+                toast.error('Erro inesperado')
+                setLoading(0)
+            }
+
+
+        } else {
+
+            return
+
+        }
+
+    }
+
+    function validation() {
+
+        let isValid = true
+
+        const elementName = document.getElementById('name')
+        const elementLastname = document.getElementById('lastname')
+        const elementEmail = document.getElementById('email')
+        const elementCompany = document.getElementById('company')
+        const elementMessage = document.getElementById('message')
 
         if (name === '' ||
             lastName === '' ||
@@ -19,44 +74,78 @@ export default function ContactComponent() {
             company === '' ||
             message === '') {
 
-            console.log('Campos em branco')
+            toast.error('Campos em branco')
+
+            elementName.classList.add('errorMessage')
+            elementLastname.classList.add('errorMessage')
+            elementEmail.classList.add('errorMessage')
+            elementCompany.classList.add('errorMessage')
+            elementMessage.classList.add('errorMessage')
+
             return
         }
 
         if (name.length <= 3) {
-            console.log('Campo nome deve ter mais de 3 caracteres')
-            return
+            toast.error('Campo nome deve ter mais de 3 caracteres')
+            elementName.classList.add('errorMessage')
+            isValid = false
+        } else if (isValid) {
+            elementName.classList.remove('errorMessage')
         }
+
+
         if (lastName.length <= 3) {
-            console.log('Campo sobrenome deve ter mais de 3 caracteres')
-            return
+            toast.error('Campo sobrenome deve ter mais de 3 caracteres')
+            elementLastname.classList.add('errorMessage')
+            isValid = false
+        } else if (isValid) {
+            elementLastname.classList.remove('errorMessage')
         }
+
+
+
         if (email.length <= 5) {
-            console.log('Campo email deve ter mais de 3 caracteres')
-            return
+            toast.error('Campo email deve ter mais de 3 caracteres')
+            elementEmail.classList.add('errorMessage')
+            isValid = false
         }
+        if (!isEmail(email)) {
+            toast.error('E-mail inválido')
+            elementEmail.classList.add('errorMessage')
+            isValid = false
+        } else if (isValid) {
+            elementEmail.classList.remove('errorMessage')
+        }
+
+
         if (company.length <= 3) {
-            console.log('Campo companhia deve ter mais de 3 caracteres')
-            return
-        }
-        if (message.length <= 10) {
-            console.log('Campo mensagem deve ter mais de 10 caracteres')
-            return
-        }
-
-        const templateParams = {
-            name,
-            lastName,
-            email,
-            company,
-            message
+            toast.error('Campo empresa deve ter mais de 3 caracteres')
+            elementCompany.classList.add('errorMessage')
+            isValid = false
+        } else if (isValid) {
+            elementCompany.classList.remove('errorMessage')
         }
 
-        alert(templateParams)
+
+        if (!isLength(message, { min: 10, max: 1000 })) {
+            toast.error('Campo mensagem deve ter entre 10 e 1000 caracteres')
+            elementMessage.classList.add('errorMessage')
+            isValid = false
+        } else if (isValid) {
+            elementMessage.classList.remove('errorMessage')
+        }
+
+
+        return isValid
+
     }
 
     function handleClear(e) {
-        e.preventDefault()
+
+        if (e) {
+            e.preventDefault()
+        }
+
 
         setCompany('')
         setEmail('')
@@ -73,32 +162,39 @@ export default function ContactComponent() {
             </div>
             <form className='contactsection-form'>
 
+                {loading > 0 && (
+                    <div className='loading2'>
+                        <img src='src/assets/RollingIcon.svg'></img>
+                    </div>
+                )}
+
                 <h6>Mande uma mensagem!</h6>
 
                 <div className='contactsection-form-maindiv'>
 
                     <div className='contactsection-form-firstdiv'>
-                        <input type='text' placeholder='Nome' className='input-text'
+                        <input type='text' placeholder='Nome' className='input-text' id='name'
                             value={name} onChange={(e) => setName(e.target.value)}>
                         </input>
 
-                        <input type='text' placeholder='Sobrenome' className='input-text'
+                        <input type='text' placeholder='Sobrenome' className='input-text' id='lastname'
                             value={lastName} onChange={(e) => setLastName(e.target.value)}>
                         </input>
                     </div>
 
                     <div className='contactsection-form-seconddiv'>
-                        <input type='email' placeholder='Email' className='input-text'
-                            value={email} onChange={(e) => setEmail(e.target.value)}>
+                        <input type='email' placeholder='Email' className='input-text' id='email'
+                            value={email} onChange={(e) => setEmail(e.target.value)} required>
                         </input>
 
-                        <input type='text' placeholder='Companhia' className='input-text'
+                        <input type='text' placeholder='Empresa' className='input-text' id='company'
                             value={company} onChange={(e) => setCompany(e.target.value)}>
                         </input>
 
-                        <textarea className='input-text-message' placeholder='Assunto'
+                        <textarea className='input-text-message' placeholder='Assunto' id='message'
                             value={message} onChange={(e) => setMessage(e.target.value)}>
                         </textarea>
+                        <div className='messageLenght'>{message.length}/1000</div>
                     </div>
 
                     <div className='contactsection-form-thirddiv'>

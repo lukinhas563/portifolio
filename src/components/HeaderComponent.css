@@ -22,8 +22,7 @@
     background-color: var(--cor-primaria);
 }
 
-.headerComponent-apresentation h2,
-h1 {
+.headerComponent-apresentation h1 {
     margin-left: 5rem;
     font-size: 4rem;
     font-weight: bolder;
