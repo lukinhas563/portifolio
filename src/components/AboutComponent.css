@@ -7,7 +7,7 @@
 
 .aboutMe {
     display: flex;
-    height: 50vh;
+    height: auto;
     align-items: center;
     justify-content: center;
     background-color: var(--cor-secundaria);

@@ -94,7 +94,6 @@ ul {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 1rem;
-
 }
 
 .headerComponent-skills ul li {
@@ -133,13 +132,15 @@ ul {
     }
 
     .headerComponent-apresentation {
-        margin-top: 5rem;
+        margin-top: 6rem;
         height: auto;
+        margin-bottom: 2rem;
     }
 
     .headerComponent-skills ul {
         grid-template-columns: 1fr 1fr 1fr;
     }
+
 
 }
 
