@@ -119,3 +119,28 @@
         line-height: 1.9rem;
     }
 }
+
+
+@media (max-width: 480px) {}
+
+@media (max-width: 320px) {
+
+    .aboutMe {
+        height: auto;
+    }
+
+    .aboutMe-article {
+        height: auto;
+        margin: 0;
+        padding: 2rem 0;
+    }
+
+    .aboutMe-article div p {
+        margin: 0;
+        width: auto;
+        font-size: 20px;
+        margin: 0 1rem;
+        padding: 0;
+    }
+
+}

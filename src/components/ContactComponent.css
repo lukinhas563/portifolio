@@ -151,3 +151,33 @@
         width: 90%;
     }
 }
+
+@media (max-width: 480px) {}
+
+@media (max-width: 320px) {
+
+    .contactsection {
+        height: 50rem;
+
+    }
+
+    .contactsection-info {
+        height: 20vh;
+        width: 100vw;
+    }
+
+    .contactsection-info h6 {
+        height: auto;
+        width: auto;
+    }
+
+    .contactsection-info p {
+        font-size: 15px;
+        width: auto;
+    }
+
+    .contactsection-form {
+        text-align: center;
+    }
+
+}

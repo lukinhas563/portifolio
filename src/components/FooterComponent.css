@@ -31,3 +31,10 @@
     justify-content: center;
     width: 100%;
 }
+
+@media (max-width: 320px) {
+    .footercomponent h6 {
+        text-align: center;
+        font-size: 10px;
+    }
+}

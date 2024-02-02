@@ -187,8 +187,44 @@ ul {
 
 @media (max-width: 320px) {
 
+    .headerComponent {
+        height: auto;
+    }
+
+    .headerComponent-apresentation {
+        width: 100vw;
+    }
+
+    .headerComponent-apresentation h1 {
+        font-size: 30px;
+    }
+
+    .headerComponent-apresentation h2 {
+        font-size: 15px;
+    }
+
+    .headerComponent-apresentation ul {
+        margin-top: 1rem;
+
+    }
+
+    .headerComponent-skills {
+        width: 100vw;
+        height: auto;
+    }
+
+    .headerComponent-skills h4 {
+        margin: 0;
+    }
+
     .headerComponent-skills ul {
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        margin: 0;
+    }
+
+    .headerComponent-skills ul li img {
+        height: 2rem;
+
     }
 
 }

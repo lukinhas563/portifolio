@@ -20,11 +20,11 @@ export default function AboutComponent() {
                     </p>
                     <p>
                         Minha expertise se estende ao ecossistema back-end, onde tenho experiência
-                        sólida na criação de <b>API's REST</b> e no gerenciamento de <b>bancos de dados SQL e NoSQL</b>.
+                        sólida na criação de <b>API`s REST</b> e no gerenciamento de <b>bancos de dados SQL e NoSQL</b>.
                     </p>
                     <p>
                         Estou animado para contribuir em projetos desafiadores na área de
-                        desenvolvimento web, focando em interfaces intuitivas e robustas API's.
+                        desenvolvimento web, focando em interfaces intuitivas e robustas API`s.
                         Agradeço por visitar meu portfólio e estou ansioso para as oportunidades
                         emocionantes que o futuro reserva.
                     </p>
