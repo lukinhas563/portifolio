@@ -46,7 +46,7 @@ export const AuthGoogleProvider = ({ children }) => {
 
                 } else {
 
-                    toast.error('Usuário não permitido')
+                    toast.error('Usuário não autorizado')
                     return
                 }
 

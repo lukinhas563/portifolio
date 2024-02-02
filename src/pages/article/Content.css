@@ -144,3 +144,12 @@ main {
     }
 
 }
+
+@media (max-width: 480px) {
+
+    .content-article-tags {
+
+        grid-template-columns: 1fr 1fr;
+    }
+
+}

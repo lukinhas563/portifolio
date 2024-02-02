@@ -223,7 +223,7 @@
     }
 
     .postsform-DivTags p {
-        padding: 0 0.5rem;
+        padding: 0;
     }
 
     .postsform-DivTec {
@@ -251,8 +251,5 @@
     .anotherPosts-cards {
         grid-template-columns: 1fr 1fr;
     }
-
-
-
 
 }
