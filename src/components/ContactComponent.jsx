@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { AiOutlineMail } from "react-icons/ai"
 import { toast } from 'react-toastify'
 import isEmail from 'validator/lib/isEmail'
@@ -15,9 +15,34 @@ export default function ContactComponent() {
     const [lastName, setLastName] = useState('')
     const [email, setEmail] = useState('')
     const [company, setCompany] = useState('')
+    const [verification, setVerification] = useState('')
+    const [verification2, setVerification2] = useState(0)
+    const [numberVerification1, setNumberVerification1] = useState(0)
+    const [numberVerification2, setNumberVerification2] = useState(0)
+    const [verification3, setVerification3] = useState(0)
     const [message, setMessage] = useState('')
 
+
     const [loading, setLoading] = useState(0)
+
+    const generateRandomNumbers = () => {
+
+        const randomNumber1 = Math.floor(Math.random() * 9 + 1)
+        const randomNumber2 = Math.floor(Math.random() * 9 + 1)
+
+        setNumberVerification1(randomNumber1)
+        setNumberVerification2(randomNumber2)
+
+        setVerification3(randomNumber1 + randomNumber2)
+
+    }
+
+    useEffect(() => {
+
+        generateRandomNumbers()
+
+    }, [])
+
 
     async function handleSubmit(e) {
         e.preventDefault()
@@ -42,6 +67,7 @@ export default function ContactComponent() {
                 toast.success('E-mail enviado com sucesso')
                 handleClear()
                 setLoading(0)
+                generateRandomNumbers()
 
             } catch (error) {
 
@@ -67,6 +93,18 @@ export default function ContactComponent() {
         const elementEmail = document.getElementById('email')
         const elementCompany = document.getElementById('company')
         const elementMessage = document.getElementById('message')
+        const elementVerification = document.getElementById('verification')
+
+        if (verification.length > 0) {
+            return
+        }
+
+        if (verification2 !== verification3) {
+            toast.error('Verificação incorreta')
+            elementVerification.classList.add('errorMessage')
+            return
+        }
+        elementVerification.classList.remove('errorMessage')
 
         if (name === '' ||
             lastName === '' ||
@@ -85,7 +123,7 @@ export default function ContactComponent() {
             return
         }
 
-        if (name.length <= 3) {
+        if (!isLength(name, { min: 3, max: 50 })) {
             toast.error('Campo nome deve ter mais de 3 caracteres')
             elementName.classList.add('errorMessage')
             isValid = false
@@ -94,7 +132,7 @@ export default function ContactComponent() {
         }
 
 
-        if (lastName.length <= 3) {
+        if (!isLength(lastName, { min: 3, max: 50 })) {
             toast.error('Campo sobrenome deve ter mais de 3 caracteres')
             elementLastname.classList.add('errorMessage')
             isValid = false
@@ -104,7 +142,7 @@ export default function ContactComponent() {
 
 
 
-        if (email.length <= 5) {
+        if (!isLength(email, { min: 3, max: 50 })) {
             toast.error('Campo email deve ter mais de 3 caracteres')
             elementEmail.classList.add('errorMessage')
             isValid = false
@@ -118,7 +156,7 @@ export default function ContactComponent() {
         }
 
 
-        if (company.length <= 3) {
+        if (!isLength(company, { min: 3, max: 50 })) {
             toast.error('Campo empresa deve ter mais de 3 caracteres')
             elementCompany.classList.add('errorMessage')
             isValid = false
@@ -189,6 +227,14 @@ export default function ContactComponent() {
 
                         <input type='text' placeholder='Empresa' className='input-text' id='company'
                             value={company} onChange={(e) => setCompany(e.target.value)}>
+                        </input>
+
+                        <input type='number' placeholder={`Quanto é ${numberVerification1} + ${numberVerification2} ?`} className='input-text' id='verification'
+                            onChange={(e) => { setVerification2(Number(e.target.value)) }}>
+                        </input>
+
+                        <input type='hidden' className='input-text' id='company'
+                            value={verification} onChange={(e) => setVerification(e.target.value)}>
                         </input>
 
                         <textarea className='input-text-message' placeholder='Assunto' id='message'
