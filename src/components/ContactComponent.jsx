@@ -200,7 +200,7 @@ export default function ContactComponent() {
 
                 {loading > 0 && (
                     <div className='loading2'>
-                        <img src='src/assets/RollingIcon.svg'></img>
+                        <img src='/RollingIcon.svg'></img>
                     </div>
                 )}
 
