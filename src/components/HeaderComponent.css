@@ -167,6 +167,7 @@ ul {
     .headerComponent {
         grid-template-columns: 1fr;
         grid-row: 1fr 1fr;
+        height: auto;
     }
 
     .headerComponent-skills {
@@ -185,7 +186,7 @@ ul {
 
 }
 
-@media (max-width: 320px) {
+@media (max-width: 375px) {
 
     .headerComponent {
         height: auto;

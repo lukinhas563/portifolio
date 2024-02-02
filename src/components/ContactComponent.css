@@ -154,10 +154,10 @@
 
 @media (max-width: 480px) {}
 
-@media (max-width: 320px) {
+@media (max-width: 480px) {
 
     .contactsection {
-        height: 50rem;
+        height: 60rem;
 
     }
 
