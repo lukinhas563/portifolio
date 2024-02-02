@@ -62,12 +62,12 @@
     background-color: var(--cor-primaria);
 }
 
-.headerComponent-about h4,
+.headerComponent-about h3,
 p {
     margin: 0 2rem;
 }
 
-.headerComponent-about h4 {
+.headerComponent-about h3 {
     font-size: 1.1rem;
     color: var(--cor-secundaria);
 }
@@ -83,7 +83,7 @@ p {
     background-color: var(--cor-primaria);
 }
 
-.headerComponent-skills h4,
+.headerComponent-skills h3,
 ul {
     margin-right: 5rem;
     margin-left: 2rem;
@@ -214,7 +214,7 @@ ul {
         height: auto;
     }
 
-    .headerComponent-skills h4 {
+    .headerComponent-skills h3 {
         margin: 0;
     }
 

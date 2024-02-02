@@ -22,7 +22,7 @@
 
 }
 
-.project-section-div h3 {
+.project-section-div h5 {
     font-size: 50px;
     margin-left: 5rem;
 
@@ -84,7 +84,7 @@
         justify-content: space-between;
     }
 
-    .project-section-div h3 {
+    .project-section-div h5 {
         font-size: 50px;
         margin-left: 0;
     }

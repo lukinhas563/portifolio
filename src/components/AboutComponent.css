@@ -32,7 +32,7 @@
     height: 100%;
 }
 
-.aboutMe-article h5 {
+.aboutMe-article h4 {
     font-size: 50px;
     color: var(--cor-terciaria);
 }
@@ -68,7 +68,7 @@
         height: auto;
     }
 
-    .aboutMe-article h5 {
+    .aboutMe-article h4 {
         margin: 2rem 0;
 
     }
@@ -86,7 +86,7 @@
         grid-template-rows: 1fr 1fr 1fr 1fr;
     }
 
-    .aboutMe-article h5 {
+    .aboutMe-article h4 {
         margin-bottom: 1rem;
     }
 }
@@ -109,7 +109,7 @@
         grid-template-rows: 1fr 1fr 1fr;
     }
 
-    .aboutMe-article h5 {
+    .aboutMe-article h4 {
         margin-bottom: 1rem;
     }
 

@@ -39,7 +39,7 @@ export default function HeaderComponent() {
 
             </div>
             <div className='headerComponent-skills'>
-                <h4>Habilidades</h4>
+                <h3>Habilidades</h3>
                 <ul>
                     {skillsData.map((skill, index) => {
                         return (

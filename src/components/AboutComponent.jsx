@@ -5,9 +5,9 @@ export default function AboutComponent() {
     return (
         <section className='aboutMe' id='about'>
             <article className='aboutMe-article'>
-                <h5>
+                <h4>
                     Sobre Mim
-                </h5>
+                </h4>
                 <div>
                     <p>
                         Olá, sou Lucas Montenegro, um entusiasta do desenvolvimento web do litoral de <b>São Paulo</b>.

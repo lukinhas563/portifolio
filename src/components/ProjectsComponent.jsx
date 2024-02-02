@@ -12,7 +12,7 @@ export default function ProjectsComponent({ posts }) {
         <section className="project-section" id='projects'>
 
             <div className='project-section-div'>
-                <h3>Projetos</h3>
+                <h5>Projetos</h5>
                 <Link to={'/post'} ><BiSolidPlusSquare size={40} /></Link>
             </div>
 
