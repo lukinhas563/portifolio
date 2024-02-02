@@ -7,8 +7,6 @@ import emailjs from '@emailjs/browser'
 import './ContactComponent.css'
 
 
-
-
 export default function ContactComponent() {
 
     const [name, setName] = useState('')

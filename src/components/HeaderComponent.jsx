@@ -31,7 +31,7 @@ export default function HeaderComponent() {
             <div className='headerComponent-apresentation'>
 
                 <h1>Lucas <br /> Montenegro </h1>
-                <h2>Desenvolvedor front-end</h2>
+                <h2>Desenvolvedor front end</h2>
                 <ul>
                     <li><a href='https://www.linkedin.com/in/lucasmontenegro/' target='_blank' rel='noreferrer'><AiFillLinkedin size={30} /></a></li>
                     <li><a href='https://github.com/lukinhas563' target='_blank' rel='noreferrer'><AiFillGithub size={30} /></a></li>
