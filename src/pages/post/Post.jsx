@@ -487,7 +487,7 @@ export default function Post() {
                     <input type='text' placeholder='Link' value={link} className='mainInput' onChange={(e) => setLink(e.target.value)}></input>
 
                     <textarea placeholder='Assunto' className='mainInput mainArea' value={tex} onChange={(e) => setTex(e.target.value)}></textarea>
-
+                    <div className='textlenght'>{tex.length}/4000</div>
                     <div className='postsform-buttons'>
 
                         {id ?

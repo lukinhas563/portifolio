@@ -93,6 +93,7 @@
     display: flex;
     flex-direction: column;
     padding: 5rem;
+    align-items: center;
     background-color: var(--cor-primaria);
 }
 
@@ -200,6 +201,10 @@
     margin-top: 5rem;
 }
 
+.textlenght {
+    margin-top: 1rem;
+}
+
 @media (max-width: 928px) {
 
     .postsform-divThumnail {
@@ -246,10 +251,23 @@
 
 }
 
-@media (max-width: 544px) {
+@media (max-width: 912px) {
+
+    .postsform-DivTags {
+        gap: 1rem;
+    }
+
+    .postsform-DivTags p {
+        margin: 0;
+    }
 
     .anotherPosts-cards {
         grid-template-columns: 1fr 1fr;
+    }
+
+    .postsform-divForm {
+        padding: 1rem;
+        align-items: normal;
     }
 
 }

@@ -148,8 +148,20 @@ main {
 @media (max-width: 480px) {
 
     .content-article-tags {
-
+        padding: 0;
         grid-template-columns: 1fr 1fr;
+    }
+
+    .content-article-title {
+        padding: 0 1rem;
+    }
+
+    .content-article-buttonDiv {
+        padding: 0 1rem;
+    }
+
+    .content-article-mainContent {
+        padding: 5rem 1rem;
     }
 
 }
