@@ -7,7 +7,7 @@
 .contactsection {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    height: 80vh;
+    height: auto;
     background-color: var(--cor-primaria);
 }
 

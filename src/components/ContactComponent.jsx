@@ -38,7 +38,7 @@ export default function ContactComponent() {
 
             try {
 
-                await emailjs.send('service_zp1xhny', 'template_xbqnznw', templateParams, 'mgaqTfNRE2UGAteAD')
+                await emailjs.send(import.meta.env.VITE_FIREBASE_EMAILSERVICE, import.meta.env.VITE_FIREBASE_EMAILTEMPLATE, templateParams, import.meta.env.VITE_FIREBASE_EMAILKEY)
                 toast.success('E-mail enviado com sucesso')
                 handleClear()
                 setLoading(0)
