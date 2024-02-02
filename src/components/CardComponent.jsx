@@ -1,7 +1,6 @@
 import { useNavigate } from 'react-router-dom';
-import './CardComponent.css'
-
 import PropTypes from 'prop-types';
+import './CardComponent.css'
 
 export default function CardComponent({ post }) {
 

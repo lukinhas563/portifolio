@@ -3,6 +3,7 @@ import { auth } from '../services/firebaseConfig.js'
 import { createContext, useEffect, useState } from 'react'
 import { Navigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
+import PropTypes from 'prop-types';
 
 export const AuthGoogleContext = createContext({})
 
@@ -56,8 +57,10 @@ export const AuthGoogleProvider = ({ children }) => {
 
                 const errorCode = error.code;
                 const errorMessage = error.message;
-                const email = error.customData.email;
-                const credential = GoogleAuthProvider.credentialFromError(error);
+                // const email = error.customData.email;
+                // const credential = GoogleAuthProvider.credentialFromError(error);
+                toast.error('Ocorreu um erro durante a autenticação')
+                console.error('Detalhes do erro: ', errorCode, errorMessage)
 
             })
 
@@ -79,3 +82,8 @@ export const AuthGoogleProvider = ({ children }) => {
         </AuthGoogleContext.Provider>
     )
 }
+
+AuthGoogleProvider.propTypes = {
+    children: PropTypes.node.isRequired,
+
+};
