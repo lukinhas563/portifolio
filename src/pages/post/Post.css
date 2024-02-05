@@ -271,3 +271,10 @@
     }
 
 }
+
+@media (max-width: 280px) {
+
+    .anotherPosts-cards {
+        grid-template-columns: 1fr;
+    }
+}

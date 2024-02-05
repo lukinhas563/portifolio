@@ -165,3 +165,23 @@ main {
     }
 
 }
+
+@media (max-width: 280px) {
+
+
+    .content-tecList {
+        margin: 2rem 0;
+    }
+
+    .content-tecList img {
+        height: 2rem;
+    }
+
+    .content-article-title {
+        font-size: 30px;
+    }
+
+    .content-article-date {
+        font-size: 15px;
+    }
+}
