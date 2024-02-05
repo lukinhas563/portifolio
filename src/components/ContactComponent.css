@@ -182,3 +182,20 @@
     }
 
 }
+
+@media (max-width: 280px) {
+
+    .contactsection-info h6 {
+        font-size: 20px;
+    }
+
+    .contactsection-info p {
+        font-size: 15px;
+
+    }
+
+    .contactsection-form h6 {
+        font-size: 20px;
+    }
+
+}

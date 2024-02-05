@@ -133,11 +133,23 @@
     }
 
     .aboutMe-article div p {
-        margin: 0;
         width: auto;
         font-size: 20px;
         margin: 0 1rem;
         padding: 0;
     }
 
+}
+
+@media (max-width: 280px) {
+
+    .aboutMe-article h4 {
+        font-size: 30px;
+    }
+
+    .aboutMe-article div p {
+
+        font-size: 15px;
+
+    }
 }

@@ -16,3 +16,12 @@
 .cardcomponent img:hover {
     transform: translate(-3%, 3%) scale(1.2) rotate(5deg);
 }
+
+@media (max-width: 280px) {
+
+    .cardcomponent {
+        width: 12rem;
+        height: 12rem;
+    }
+
+}
