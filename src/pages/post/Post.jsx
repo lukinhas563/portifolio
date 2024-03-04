@@ -191,6 +191,10 @@ export default function Post() {
                 <img src='/icons/figmaicon.svg' key={index} onClick={() => handleDeleteTec(index)} />
             )
 
+        } if (text === 'TS' || text === 'ts' || text === 'Ts' || text === 'typescript' || text === 'TypeScript' || text === 'TYPESCRIPT') {
+            return (
+                <img src='/icons/typescripticon.png' key={index} onClick={() => handleDeleteTec(index)} />
+            )
         } else {
             return (
                 <p key={index} onClick={() => handleDeleteTec(index)}>{text}</p>
