@@ -22,6 +22,7 @@ export default function HeaderComponent() {
         { icon: './icons/mysqlicon.png', alt: 'Icone MySQL', name: 'MySQL' },
         { icon: './icons/dockericon.png', alt: 'Icone Docker', name: 'Docker' },
         { icon: './icons/mongodbicon.png', alt: 'Icone MongoDB', name: 'MongoDB' },
+        { icon: './icons/typescripticon.png', alt: 'Icone TypeScript', name: 'TypeScript' },
     ]
 
     const [skillName, setSkillName] = useState('')
