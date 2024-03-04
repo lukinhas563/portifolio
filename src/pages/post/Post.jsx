@@ -143,7 +143,7 @@ export default function Post() {
                 <img src='/icons/cssicon.png' key={index} onClick={() => handleDeleteTec(index)} />
             )
 
-        } if (text === 'NEXT' || text === 'next' || text === 'Next' || text === 'Next.js' || text === 'Next js' || text === 'next js') {
+        } if (text === 'NEXT' || text === 'next' || text === 'Next' || text === 'Next.js' || text === 'Next js' || text === 'next js' || text === 'NextJS' || text === 'nextjs' || text === 'NEXTJS' || text === 'NextJs ') {
 
             return (
                 <img src='/icons/nextjsicon.png' key={index} onClick={() => handleDeleteTec(index)} />
