@@ -83,7 +83,7 @@ export default function Content() {
 
             )
 
-        } if (text === 'NEXT' || text === 'next' || text === 'Next' || text === 'Next.js' || text === 'Next js' || text === 'next js') {
+        } if (text === 'NEXT' || text === 'next' || text === 'Next' || text === 'Next.js' || text === 'Next js' || text === 'next js' || text === 'NextJS' || text === 'nextjs' || text === 'NEXTJS' || text === 'NextJs ') {
 
             return (
                 <li key={text}
@@ -190,6 +190,20 @@ export default function Content() {
                 >
 
                     <img src='/icons/figmaicon.svg' key={text} />
+                    {tecInfo === text && (<p>{tecInfo}</p>)}
+                </li>
+
+            )
+
+        } if (text === 'TS' || text === 'ts' || text === 'Ts' || text === 'typescript' || text === 'TypeScript' || text === 'TYPESCRIPT') {
+
+            return (
+                <li key={text}
+                    onMouseOver={() => setTecInfo(text)}
+                    onMouseOut={() => setTecInfo('')}
+                >
+
+                    <img src='/icons/typescripticon.png' key={text} />
                     {tecInfo === text && (<p>{tecInfo}</p>)}
                 </li>
 
